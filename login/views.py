@@ -41,7 +41,7 @@ def logout_page(request):
 @login_required
 def home(request):
 	username = request.user.username
-	todo = models.todo.objects.all()
+	todo = models.todo.objects.filter(createdby = username)
 	#todo = models.todo.objects.filter(models.todo.name.username = username).order_by('id')
 	return render_to_response(
 	'home.html',
@@ -55,10 +55,10 @@ def index(request):
 	
 def add(request):
 	if request.method == 'POST':
-		form = ToDoForm(request.POST)
+		form = ToDoForm(request.POST)	
 		if form.is_valid():
 			obj = models.todo.objects.create(
-			#name = form.cleaned_data['name'],
+			createdby = request.user.username,
 			description = form.cleaned_data['description']
 			)
 			#created = form.cleaned_data['created']
