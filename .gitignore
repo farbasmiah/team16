@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+myvenv
+loginapp.sqlite
+/static
+.DS_Store

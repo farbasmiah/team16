@@ -1,0 +1,15 @@
+{% extends "registration/base.html" %}
+{% block title %}Welcome to Django{% endblock %}
+{% block head %}Welcome to Django{% endblock %}
+{% block content %}
+    <p>Welcome {{ user.username }} !!!</p>
+    <a href="/logout/">Logout</a>
+	<h2>todo</h2>
+	<a href="/add/">Add action</a>
+ 
+	{% for x in todo %}
+ 
+		<p>{{ x.description }}</p>
+	<hr />
+{% endfor %}
+{% endblock %}

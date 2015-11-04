@@ -1,0 +1,35 @@
+body {
+  background: white; }
+
+.header {
+  display: none !important; }
+
+nav {
+  display: none; }
+
+h1 {
+  color: black; }
+
+/* .photograph--show{
+	background-image: none!important;
+} */
+.footer__links {
+  display: none; }
+
+.no-print {
+  display: none !important; }
+
+#searchSiteform input {
+  display: none !important; }
+
+/*code sources
+-----------------------------------------------------*/
+/*announcements
+---------------------------------------*/
+.announcement--info, .announcement--fix, .announcement--alert {
+  display: none; }
+
+/*accordion
+---------------------------------------*/
+.accordion__description {
+  display: block !important; }

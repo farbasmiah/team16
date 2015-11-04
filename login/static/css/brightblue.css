@@ -1,0 +1,1844 @@
+/* Custom variables
+-------------------------------------------------------------- */
+/* Variable imports
+-------------------------------------------------------------- */
+/* Breakpoints
+-------------------------------------------------------------- */
+/* Indigo colour palette
+-------------------------------------------------------------- */
+/* Generic grayscale
+-------------------------------------------------------------- */
+/* Tints
+-----------------------------------------------------------------*/
+/* Form colours
+--------------------------------------------------------------*/
+/* element specific
+-------------------------------------------------------------- */
+/* Project specific
+-------------------------------------------------------------- */
+/* image classes
+--------------------------------------------------------------------*/
+/* blurb caption overlay
+--------------------------------------------------------------------*/
+/*images
+----------------------------------------*/
+/*layout
+----------------------------------------*/
+/*video
+----------------------------------------*/
+/*search
+------------------------------------------------*/
+/*media
+------------------------------------------------*/
+/* Z-index
+------------------------------------------------*/
+/* Gridset Gutter values
+    - there is no method to get these values 
+      directly from Gridset
+------------------------------------------------*/
+/* Font stacks
+-------------------------------------------------------------- */
+/* Common includes
+-------------------------------------------------------------- */
+/* Mixins
+-------------------------------------------------------------- */
+/*
+
+    A simpler media query mixin
+
+    This mixin allows you to quickly create a media query in your project. With the ability to define the breakpoint in PX (which get's converted into EMs).
+    There's also the ability to define min/max and width/height (with defaults to min-width).
+
+    There's also an option to duplicate the content into a OldIE conditionally classed bit of CSS.
+
+    You would use it like this
+
+        body {
+            @include (280) {
+                background-color: blue;
+            }
+            @include mq(600, false) {
+                background-color: red;
+            }
+            @include mq(1200, true, max) {
+                font-size: 110%;
+            }
+        }
+
+    Which would give you this compiled CSS
+
+        @media (min-width: 17.5em) {
+            body {
+                background-color: blue;
+            }
+        }
+        @media (min-width: 37.5em) {
+            body {
+            background-color: red;
+            }
+        }
+        .lt-ie9 body {
+            font-size: 110%;
+        }
+        @media (max-width: 75em) {
+            body {
+                font-size: 110%;
+            }
+        }
+
+*/
+/* 
+* Mixin name: Gradient
+* Use: Shorthand gradient declarations with vendor prefixer/ie fallbacks
+* Note: N/A
+-------------------------------------------------------------- */
+/*
+    By default this mixin is to be used for creating .no-js .element fallbacks.
+
+    For example:
+
+      .selector {
+        @include js {
+          width: 303px;
+        }
+      }
+
+    Which gives:
+
+      .no-js .selector {
+        width: 303px;
+      }
+
+*/
+/*
+    By default this mixin is to be used for creating html.no-CSS3Thing .element fallbacks.
+
+    For example:
+
+      .selector {
+        @include modernizr(cssanimations) {
+          left: 400px;
+        }
+      }
+
+    Which gives:
+
+      html.no-cssanimations .selector {
+        left: 400px;
+      }
+
+*/
+/* 
+* Mixin name: List
+* Use: 
+* 		1. Remove bullets and indentation from a list
+* Note: N/A
+-------------------------------------------------------------- */
+/* 1
+-------------------------------------------------------------- */
+/* 
+* Mixin name: On interaction
+* Use: Shorthand for most common interaction states
+* Note: N/A
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Guttering
+* Use: Controlling the spacing at the bottom of a module
+* Note: See http://css-tricks.com/spacing-the-bottom-of-modules/
+-------------------------------------------------------------- */
+/* 
+* Name: SASS-IE
+* Use: Media query handling outside of Gridset
+* Notes: See http://jakearchibald.github.io/sass-ie/
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Alignment
+* Use: Align content with horizontal padding
+* Note: N/A
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Unit
+* Use: 
+* 		1. Set REM value with pixel value fallback
+* Note: N/A
+-------------------------------------------------------------- */
+/* 1
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Inline block
+* Use: Bullet proof inline block browser support
+* Note: N/A
+-------------------------------------------------------------- */
+/* Parent Stylesheet
+-------------------------------------------------------------- */
+/* Custom variables
+-------------------------------------------------------------- */
+/* Variable imports
+-------------------------------------------------------------- */
+/* Breakpoints
+-------------------------------------------------------------- */
+/* Indigo colour palette
+-------------------------------------------------------------- */
+/* Generic grayscale
+-------------------------------------------------------------- */
+/* Tints
+-----------------------------------------------------------------*/
+/* Form colours
+--------------------------------------------------------------*/
+/* element specific
+-------------------------------------------------------------- */
+/* Project specific
+-------------------------------------------------------------- */
+/* image classes
+--------------------------------------------------------------------*/
+/* blurb caption overlay
+--------------------------------------------------------------------*/
+/*images
+----------------------------------------*/
+/*layout
+----------------------------------------*/
+/*video
+----------------------------------------*/
+/*search
+------------------------------------------------*/
+/*media
+------------------------------------------------*/
+/* Z-index
+------------------------------------------------*/
+/* Gridset Gutter values
+    - there is no method to get these values 
+      directly from Gridset
+------------------------------------------------*/
+/* Font stacks
+-------------------------------------------------------------- */
+/* Mixins
+-------------------------------------------------------------- */
+/*
+
+    A simpler media query mixin
+
+    This mixin allows you to quickly create a media query in your project. With the ability to define the breakpoint in PX (which get's converted into EMs).
+    There's also the ability to define min/max and width/height (with defaults to min-width).
+
+    There's also an option to duplicate the content into a OldIE conditionally classed bit of CSS.
+
+    You would use it like this
+
+        body {
+            @include (280) {
+                background-color: blue;
+            }
+            @include mq(600, false) {
+                background-color: red;
+            }
+            @include mq(1200, true, max) {
+                font-size: 110%;
+            }
+        }
+
+    Which would give you this compiled CSS
+
+        @media (min-width: 17.5em) {
+            body {
+                background-color: blue;
+            }
+        }
+        @media (min-width: 37.5em) {
+            body {
+            background-color: red;
+            }
+        }
+        .lt-ie9 body {
+            font-size: 110%;
+        }
+        @media (max-width: 75em) {
+            body {
+                font-size: 110%;
+            }
+        }
+
+*/
+/* 
+* Mixin name: Gradient
+* Use: Shorthand gradient declarations with vendor prefixer/ie fallbacks
+* Note: N/A
+-------------------------------------------------------------- */
+/*
+    By default this mixin is to be used for creating .no-js .element fallbacks.
+
+    For example:
+
+      .selector {
+        @include js {
+          width: 303px;
+        }
+      }
+
+    Which gives:
+
+      .no-js .selector {
+        width: 303px;
+      }
+
+*/
+/*
+    By default this mixin is to be used for creating html.no-CSS3Thing .element fallbacks.
+
+    For example:
+
+      .selector {
+        @include modernizr(cssanimations) {
+          left: 400px;
+        }
+      }
+
+    Which gives:
+
+      html.no-cssanimations .selector {
+        left: 400px;
+      }
+
+*/
+/* 
+* Mixin name: List
+* Use: 
+* 		1. Remove bullets and indentation from a list
+* Note: N/A
+-------------------------------------------------------------- */
+/* 1
+-------------------------------------------------------------- */
+/* 
+* Mixin name: On interaction
+* Use: Shorthand for most common interaction states
+* Note: N/A
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Guttering
+* Use: Controlling the spacing at the bottom of a module
+* Note: See http://css-tricks.com/spacing-the-bottom-of-modules/
+-------------------------------------------------------------- */
+/* 
+* Name: SASS-IE
+* Use: Media query handling outside of Gridset
+* Notes: See http://jakearchibald.github.io/sass-ie/
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Alignment
+* Use: Align content with horizontal padding
+* Note: N/A
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Unit
+* Use: 
+* 		1. Set REM value with pixel value fallback
+* Note: N/A
+-------------------------------------------------------------- */
+/* 1
+-------------------------------------------------------------- */
+/* 
+* Mixin name: Inline block
+* Use: Bullet proof inline block browser support
+* Note: N/A
+-------------------------------------------------------------- */
+/* Custom patterns
+* Patterns are not duplicates of pre-existing patterns in Indigo - only bespoke, skin-specific patterns should
+* be within this directory.
+-------------------------------------------------------------- */
+.blurb--captioned-image.float-left, .blurb--captioned-image.float-right {
+  margin: 0 1em 1em; }
+
+.blurb--captioned-image.float-left {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.429292929%;
+  clear: none;
+  float: left;
+  margin-left: 0;
+  margin-right: 3.03030303%; }
+
+.blurb--captioned-image.float-right {
+  display: block;
+  float: left;
+  margin-left: 51.459595959%;
+  margin-right: -100%;
+  width: 48.429292929%;
+  clear: none;
+  float: right;
+  margin-right: 0;
+  margin-left: 3.03030303%; }
+
+.blurb--captioned-image .blurb__img {
+  margin-bottom: 0;
+  vertical-align: top; }
+
+.blurb--captioned-image .blurb__body {
+  background-color: #f7f7f4;
+  padding: 1em 0.5em 0.5em;
+  vertical-align: top; }
+
+.blurb--captioned-image .tag__heading--captioned-overlay {
+  display: none; }
+
+@media only screen and (min-width: 990px) {
+  .blurb--captioned-image.blurb--captioned-image-overlayed .blurb__title {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .blurb--captioned-image.blurb--captioned-image-overlayed .tag.tag--hidden {
+    display: none; }
+  .blurb--captioned-image.blurb--captioned-image-overlayed .tag__heading--captioned-overlay {
+    display: block;
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+    padding-bottom: 1rem; }
+  .blurb--captioned-image.blurb--captioned-image-overlayed .tag__heading--captioned-overlay-border {
+    margin-bottom: 10px;
+    margin-bottom: 1rem; }
+  .blurb--captioned-image.blurb--captioned-image-overlayed .blurb__body {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    box-sizing: border-box;
+    opacity: 0.9;
+    max-height: 70%;
+    overflow: auto; }
+    .blurb--captioned-image.blurb--captioned-image-overlayed .blurb__body p {
+      font-size: 14px;
+      font-size: 1.4rem; } }
+
+.middle-split {
+  overflow: hidden; }
+  .middle-split li {
+    width: 100%; }
+  .middle-split h1.heading {
+    margin-left: 0; }
+  .middle-split h2.heading {
+    margin-left: 0; }
+  .middle-split h3.heading {
+    margin-left: 0; }
+  .middle-split h4.heading {
+    margin-left: 0; }
+  .middle-split h5.heading {
+    margin-left: 0; }
+  .middle-split h6.heading {
+    margin-left: 0; }
+  @media only screen and (max-width: 989px) {
+    .middle-split > section.middle-split__column1 {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; }
+    .middle-split > section.middle-split__column2 {
+      clear: both;
+      display: block;
+      float: left;
+      margin-left: 0;
+      width: 100%; } }
+  @media only screen and (min-width: 990px) {
+    .middle-split > section.middle-split__column1 {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 48.4831631107%; }
+    .middle-split > section.middle-split__column2 {
+      display: block;
+      float: left;
+      margin-left: 51.5168368893%;
+      margin-right: -100%;
+      width: 48.4831631107%; }
+    .middle-split.middle-split--66-33 > section.middle-split__column1 {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 63.9296187683%; }
+    .middle-split.middle-split--66-33 > section.middle-split__column2 {
+      display: block;
+      float: left;
+      margin-left: 66.963292547%;
+      margin-right: -100%;
+      width: 33.036707453%; }
+    .middle-split.middle-split--33-66 > section.middle-split__column1 {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 33.036707453%; }
+    .middle-split.middle-split--33-66 > section.middle-split__column2 {
+      display: block;
+      float: left;
+      margin-left: 36.0703812317%;
+      margin-right: -100%;
+      width: 63.9296187683%; } }
+
+/*** NEWS INV ***/
+.newsLarge article.blurb-wide--paired {
+  width: 47%;
+  float: left; }
+  .newsLarge article.blurb-wide--paired:nth-of-type(even) {
+    margin-left: 4%; }
+  .newsLarge article.blurb-wide--paired:nth-of-type(odd) {
+    margin-left: 0;
+    clear: left; }
+
+.newsLarge {
+  margin: 2em 0;
+  /*override for paired
+	---------------------------------------------*/ }
+  .newsLarge span.thumb-image {
+    width: 33%; }
+  @media only screen and (min-width: 768px) {
+    .newsLarge [class*=blurb-wide] img {
+      float: left;
+      margin-right: 0;
+      width: 33%; }
+    .newsLarge [class*=blurb-wide] span.blurb-wide--large-image img {
+      width: 100%;
+      float: none; }
+    .newsLarge [class*=blurb-wide] div {
+      float: left;
+      margin-left: 5%;
+      margin-right: 0;
+      width: 62%;
+      top: 0;
+      position: inherit; }
+      .newsLarge [class*=blurb-wide] div.blurb-wide--large-image {
+        margin-left: 0;
+        width: 100%; } }
+  .newsLarge .blurb-wide {
+    overflow: hidden;
+    margin-top: 1em; }
+    .newsLarge .blurb-wide span.thumb-image {
+      display: block;
+      width: 100%; }
+    .newsLarge .blurb-wide div.blurb-wide--no-thumb {
+      margin-left: 0;
+      width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .newsLarge article {
+      width: 100%;
+      float: none;
+      overflow: hidden; }
+      .newsLarge article:nth-child(odd) {
+        margin-left: 0; }
+      .newsLarge article .thumb-image img {
+        width: 100%; }
+      .newsLarge article div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        clear: left; }
+      .newsLarge article.blurb-wide--paired {
+        width: 100%; }
+        .newsLarge article.blurb-wide--paired:nth-of-type(even) {
+          margin-left: 0; } }
+  .newsLarge .invFoot {
+    clear: both;
+    width: 100%; }
+
+article.news {
+  margin: 2em 0; }
+  article.news span.thumb-image {
+    width: 33%; }
+  @media only screen and (min-width: 768px) {
+    article.news [class*=blurb-wide] img {
+      float: left;
+      margin-right: 0;
+      width: 33%; }
+    article.news [class*=blurb-wide] div {
+      float: left;
+      margin-left: 5%;
+      margin-right: 0;
+      width: 62%;
+      top: 0;
+      position: inherit; } }
+  @media only screen and (max-width: 767px) {
+    article.news article {
+      width: 100%;
+      float: none;
+      overflow: hidden; }
+    article.news article:nth-child(odd) {
+      margin-left: 0; }
+    article.news article .thumb-image img {
+      width: 100%; }
+    article.news article div {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      clear: left; } }
+
+.newsSmall article {
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc; }
+  .newsSmall article div p {
+    font-size: .88em; }
+
+.newsSmall [class*=blurb-wide] div {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  top: 0;
+  position: inherit; }
+
+.newsviewer-otherarticles a {
+  float: right;
+  background-color: #034da1;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 10px 20px;
+  color: white; }
+  .newsviewer-otherarticles a:hover {
+    background-color: #002855;
+    text-decoration: none; }
+
+/* News in middle split and three columns override
+------------------------------------------------------*/
+@media only screen and (max-width: 989px) {
+  .middle-split .newsLarge, .threecolumns .newsLarge {
+    margin-top: 0; }
+    .middle-split .newsLarge article, .threecolumns .newsLarge article {
+      width: 100%; }
+      .middle-split .newsLarge article:nth-child(odd), .middle-split .newsLarge article:nth-child(even), .threecolumns .newsLarge article:nth-child(odd), .threecolumns .newsLarge article:nth-child(even) {
+        margin-left: 0; } }
+
+/* RSS
+----------------------------------------------------------------*/
+.news-title .news-rss-feed,
+.events-title .news-rss-feed {
+  float: right; }
+
+/* Event row fix 
+----------------------------------------------------------------*/
+.row {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1em; }
+
+.layout-horizontal--nav-1col.section-search .site-content__main {
+  width: 100%; }
+
+.layout-horizontal--nav-1col.section-search aside.facets {
+  left: -305px;
+  position: absolute;
+  top: 0;
+  width: 285px;
+  border: 2px solid #000;
+  background: #fff; }
+
+.layout-horizontal--nav-1col.section-search #siteSearchErrorField {
+  display: none; }
+
+.layout-horizontal--nav-1col.section-search .off-canvas.btn {
+  margin: 1em 0; }
+
+.layout-horizontal--nav-1col.section-search .mobileCloseAside {
+  cursor: pointer; }
+
+.layout-horizontal--nav-1col.section-search .search-box {
+  width: 100%;
+  margin-bottom: 1em; }
+  .layout-horizontal--nav-1col.section-search .search-box input[type=text] {
+    width: 75%; }
+  .layout-horizontal--nav-1col.section-search .search-box .btn.search {
+    width: 92px;
+    font-size: 1.4rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em; }
+
+@media only screen and (min-width: 768px) {
+  .layout-horizontal--nav-1col.section-search .site-content__main {
+    width: 70%;
+    margin-left: 30%; }
+  .layout-horizontal--nav-1col.section-search aside.facets {
+    width: 26%;
+    position: static;
+    padding: 1%;
+    margin-right: 2%; }
+  .layout-horizontal--nav-1col.section-search .mobileCloseAside {
+    display: none; }
+  .layout-horizontal--nav-1col.section-search .off-canvas.btn {
+    display: none; } }
+
+@media only screen and (min-width: 990px) {
+  .layout-horizontal--nav-1col.section-search .search-box {
+    width: 28%; } }
+
+.profile__img {
+  float: right;
+  width: 25%;
+  border: 1em solid #E0E0E0;
+  border-width: 1em 2em;
+  margin: 1em 1em 1em 0; }
+
+.profile__group {
+  font-size: 14px;
+  width: 100%;
+  border-bottom: 2px dotted #889;
+  clear: left;
+  display: inline-block; }
+  .profile__group a {
+    font-size: 14px; }
+  @media (min-width: 700px) {
+    .profile__group {
+      width: 65%; } }
+  .profile__group address {
+    margin-bottom: 1em; }
+  .profile__group p {
+    width: 100px;
+    float: left;
+    margin-right: -120px; }
+    .profile__group p span {
+      color: #889; }
+  .profile__group .data {
+    width: auto;
+    float: left;
+    margin-left: 120px; }
+    .profile__group .data p {
+      width: auto; }
+
+.group--research-themes {
+  border-bottom-width: 0px; }
+
+.group--job-role span {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 2em;
+  width: 75%; }
+  @media (min-width: 500px) {
+    .group--job-role span {
+      margin-bottom: .5em; } }
+  @media (min-width: 700px) {
+    .group--job-role span {
+      width: 100%; } }
+
+.group--post li.list__item span {
+  font-weight: 700; }
+
+.group--contact {
+  margin-top: 1em; }
+  .group--contact .list {
+    list-style: none;
+    margin-bottom: 1em;
+    padding: 0; }
+    .group--contact .list .list__item span {
+      font-weight: 700; }
+    .group--contact .list .list__item p {
+      margin: 0 0 0.5em; }
+
+address {
+  font-style: normal; }
+
+.tabs .profile__header h3 {
+  margin: 0; }
+
+.tabs .profile__header a {
+  margin-bottom: 1em; }
+
+.list--clean {
+  padding: 0;
+  list-style: none; }
+  .list--clean li {
+    font-size: 14px;
+    margin-bottom: 1em; }
+
+.list--striped {
+  list-style: none;
+  padding: 0; }
+  .list--striped li {
+    padding: 4px 8px; }
+    .list--striped li.evenitem {
+      background-color: #dddddd; }
+  .list--striped a {
+    display: inline;
+    color: #111;
+    text-decoration: none; }
+    .list--striped a.hide-this {
+      display: none; }
+  .list--striped span.hide-this {
+    display: none; }
+
+.group a {
+  color: #034DA1;
+  font-weight: 600; }
+  .group a:hover {
+    text-decoration: underline; }
+
+.group .to-top {
+  font-size: 10px;
+  text-align: right; }
+
+.tabs--IRIS a.active {
+  background-color: #f6f6f6;
+  padding-top: 6px;
+  top: 1px;
+  z-index: 5150; }
+
+.tabs--IRIS .tabs__group li {
+  background: transparent; }
+  .tabs--IRIS .tabs__group li:hover, .tabs--IRIS .tabs__group li:active {
+    background: transparent; }
+
+.tabs--IRIS .tabs__navigation li:hover, .tabs--IRIS .tabs__navigation li:active {
+  background: #F0F0F0; }
+
+.tabs--IRIS .list--striped li.evenitem {
+  background-color: #dddddd; }
+
+.biography table {
+  margin-top: 1em; }
+
+.publications {
+  padding-top: 1em; }
+
+.publications > p {
+  font-style: italic; }
+
+.publications > button {
+  float: right; }
+
+#orderByButtons {
+  background: none repeat scroll 0 0 #777;
+  color: #fff;
+  margin-bottom: 8px;
+  padding: 3px 2%;
+  width: 96%; }
+  #orderByButtons span.orderby {
+    border-right: 1px solid #d8d8d8;
+    color: #d8d8d8;
+    padding: 0 5px;
+    cursor: pointer; }
+
+#orderByButtons span.sort--down span {
+  background: url("../images/iris/sort-direction-arrows.png") no-repeat scroll right -14px transparent;
+  padding-right: 13px; }
+
+#orderByButtons span.sort--up span {
+  background: url("../images/iris/sort-direction-arrows.png") no-repeat scroll right 6px transparent;
+  padding-right: 13px; }
+
+#publications-inner ul.list--striped {
+  margin-left: 0; }
+
+#publications-inner .favourite {
+  background-image: url("../images/iris/favourite_star_yellow32.png");
+  background-position: 8px 2px;
+  background-repeat: no-repeat;
+  padding-left: 30px; }
+
+/* Special Ben functionality styles */
+#publications-inner .Hidden {
+  display: none; }
+
+div#showmore {
+  cursor: pointer;
+  color: #034da1; }
+
+/* department styles */
+.researcher__tabs {
+  display: none;
+  border-top: 4px dotted #F0F0F0; }
+
+.department ul.list--striped {
+  margin-left: 0; }
+  .department ul.list--striped li.list__item {
+    clear: both;
+    text-align: right; }
+    .department ul.list--striped li.list__item span.groupMemberData {
+      float: left; }
+
+/* research group styles */
+.research__themes {
+  border-top: 4px dotted #F0F0F0; }
+  .research__themes .group__list {
+    margin-left: 0; }
+
+.research__activities {
+  border-top: 4px dotted #F0F0F0; }
+  .research__activities .group__list {
+    margin-left: 0; }
+
+.research__team {
+  border-top: 4px dotted #F0F0F0; }
+
+/* RPS - Research Publications
+--------------------------------------------------------------------------------------*/
+#rps_results ul {
+  margin-left: 0;
+  overflow: hidden; }
+
+#rps_results li {
+  float: left;
+  list-style-type: none;
+  margin-right: 20px;
+  margin-right: 2rem; }
+
+/* General styles
+-----------------------------------------------------*/
+.iframe-holder {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  .iframe-holder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .iframe-holder.float-left {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.429292929%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 3.03030303%; }
+  .iframe-holder.float-right {
+    display: block;
+    float: left;
+    margin-left: 51.459595959%;
+    margin-right: -100%;
+    width: 48.429292929%;
+    clear: none;
+    float: right;
+    margin-right: 0;
+    margin-left: 3.03030303%; }
+  @media only screen and (max-width: 767px) {
+    .iframe-holder.float-left, .iframe-holder.float-right {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 99.84375%;
+      float: none; } }
+
+/* Twitter specific - semantics are dictated by the 
+    API so lets have custom classes (the general styles)
+    don't work for this
+-----------------------------------------------------*/
+.twitteriframe {
+  width: 100;
+  overflow: hidden;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+  .twitteriframe.float-left {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.429292929%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 3.03030303%; }
+  .twitteriframe.float-right {
+    display: block;
+    float: left;
+    margin-left: 51.459595959%;
+    margin-right: -100%;
+    width: 48.429292929%;
+    clear: none;
+    float: right;
+    margin-right: 0;
+    margin-left: 3.03030303%; }
+  @media only screen and (max-width: 767px) {
+    .twitteriframe.float-left, .twitteriframe.float-right {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 99.84375%;
+      float: none; } }
+
+/* Git include uses a resizing trick so not as neat as 
+default iframe pattern
+-------------------------------------------------------*/
+.gitproxyframe {
+  width: 100%; }
+
+/* Overrides
+* FYI - Unfortunatly you cannot override Sass variables to be inherited by existing code. For example where a colour variable changes,
+* an override partial is needed redeclaring the new colour.
+*
+-------------------------------------------------------------- */
+.archive-navigation__list {
+  list-style: none;
+  display: inline-block;
+  zoom: 1; }
+
+.archive-navigation__item {
+  margin: 0;
+  float: left;
+  text-transform: none;
+  padding: 0 0.4em; }
+
+.site-content__sidebar article.blurb-wide {
+  padding-bottom: 1em; }
+  .site-content__sidebar article.blurb-wide h4 {
+    margin-top: 1em; }
+
+.blurb-wide span.thumb-image {
+  width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .blurb-wide span.thumb-image {
+    display: block;
+    width: 33%; } }
+
+[class*=blurb-wide] div {
+  display: block;
+  float: left;
+  margin-left: 36.0303%;
+  margin-right: -100%;
+  width: 63.85859%;
+  top: -4px;
+  position: relative; }
+
+[class*=blurb-wide] img {
+  display: block;
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+  width: 33%; }
+
+.blurb--captioned-image .tag {
+  background: #00a5b8;
+  color: #00a5b8; }
+
+.blurb--captioned-image-overlayed {
+  padding-bottom: 0;
+  margin-bottom: 1em; }
+  @media only screen and (min-width: 990px) {
+    .blurb--captioned-image-overlayed .tag__body a {
+      color: #00a5b8; }
+      .blurb--captioned-image-overlayed .tag__body a:hover {
+        color: #00a5b8;
+        text-decoration: underline; }
+    .blurb--captioned-image-overlayed .tag {
+      background: #00a5b8;
+      color: #00a5b8; }
+    .blurb--captioned-image-overlayed.blurb--captioned-image-overlayed .tag__heading--captioned-overlay-border {
+      width: 10%;
+      height: 1px;
+      border-bottom: 1px solid #00a5b8; } }
+
+footer div:first-child {
+  background-color: #40403e;
+  padding: 40px 35px;
+  margin-left: -35px;
+  margin-right: -35px;
+  color: #fff;
+  clear: left; }
+  footer div:first-child h2 {
+    font-size: 1.6rem;
+    text-transform: none; }
+  footer div:first-child a {
+    color: #eee; }
+    footer div:first-child a:hover,
+    footer div:first-child a:active,
+    footer div:first-child a:focus {
+      color: white; }
+
+footer article ul, footer article ul li {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  display: block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+footer article ul {
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  footer article ul li {
+    margin-left: 0;
+    list-style-type: none; }
+    footer article ul li:before {
+      background-color: transparent !important; }
+
+input, textarea {
+  padding: .5em 2%;
+  vertical-align: middle; }
+
+/* search site form
+---------------------------------------------------------------*/
+#searchSiteform input[type="text"], #searchSiteform input[type=search] {
+  padding: 1rem 0 1rem 0;
+  background-color: #dee8ea;
+  float: left;
+  border: none;
+  width: 85%;
+  padding-left: 40px;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.fa-search:before {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #54a6bb;
+  font-size: 2.5rem; }
+
+#searchSiteform {
+  max-width: 830px;
+  width: 100%;
+  border: 1px solid #54a6bb;
+  overflow: hidden;
+  border-radius: 0.5em;
+  display: block;
+  background-color: #dee8ea;
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1.5em; }
+  #searchSiteform input {
+    font-size: 2.1rem; }
+    #searchSiteform input[type=search] {
+      font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
+    #searchSiteform input[type=submit] {
+      font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+      line-height: 1.2;
+      text-align: center;
+      background-color: #54a6bb;
+      border: none;
+      border-radius: 0;
+      width: 10%;
+      float: right;
+      display: block;
+      margin: 0;
+      padding: 1rem 1.6rem;
+      color: white; }
+  @media only screen and (max-width: 767px) {
+    #searchSiteform {
+      border: none;
+      border-radius: 0;
+      background-color: transparent; }
+      #searchSiteform input[type="text"], #searchSiteform input[type="search"] {
+        width: 100%;
+        margin-bottom: 0.5rem; }
+      #searchSiteform input[type="submit"] {
+        float: none;
+        border-radius: 0.5rem;
+        width: auto; } }
+
+#siteSearchErrorField {
+  display: none;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 2em;
+  margin-top: -2em; }
+
+.site-content__sidebar #searchSiteform input[type=search] {
+  width: 65%; }
+
+.site-content__sidebar #searchSiteform input[type=submit] {
+  width: 20%; }
+
+/* Image options
+-------------------------------------------------------------- */
+img.float-left, figure.float-left, .img-sm.float-left, .img-md.float-left, .img-lg.float-left, .img-xl.float-left, .img-xxl.float-left, .no-respond.float-left {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.429292929%;
+  clear: none;
+  float: left;
+  margin-left: 0;
+  margin-right: 3.03030303%;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
+img.float-right, figure.float-right, .img-sm.float-right, .img-md.float-right, .img-lg.float-right, .img-xl.float-right, .img-xxl.float-right, .no-respond.float-right {
+  display: block;
+  float: left;
+  margin-left: 51.459595959%;
+  margin-right: -100%;
+  width: 48.429292929%;
+  clear: none;
+  float: right;
+  margin-right: 0;
+  margin-left: 3.03030303%;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
+/* fixing the float issue
+-----------------------------*/
+.img-rounded {
+  border-radius: 50em; }
+
+.img-sm {
+  max-width: 200px; }
+
+.img-md {
+  max-width: 400px; }
+
+.img-lg {
+  max-width: 767px; }
+
+.img-xl {
+  max-width: 989px; }
+
+.img-xxl {
+  max-width: 1400px; }
+
+.img-sm, .img-md, .img-lg, .img-xl, .img-xxl {
+  width: 100%; }
+
+@media only screen and (max-width: 767px) {
+  .img-lg, .img-xl, .img-xxl {
+    width: 100%; }
+  .decorative {
+    display: none !important; }
+  .img-pull-left.large-image,
+  .img-pull-left.xl-image,
+  .img-pull-left.xxl-image, .img-pull-right.large-image,
+  .img-pull-right.xl-image,
+  .img-pull-right.xxl-image {
+    width: 100%; } }
+
+/* lets extend all of the indigo release 2 stuff for our lovely SILVA CMS
+--------------------------------------------------------------------------*/
+.small-image {
+  max-width: 320px; }
+
+.medium-image {
+  max-width: 400px; }
+
+.large-image {
+  max-width: 767px; }
+
+.xl-image {
+  max-width: 989px; }
+
+.xxl-image {
+  max-width: 1400px; }
+
+.img-pull-left, .float-left {
+  float: left; }
+
+.img-pull-right, .float-right {
+  float: right; }
+
+.small-image, .medium-image, .large-image, .xl-image, .xxl-image {
+  width: 100%; }
+
+@media only screen and (max-width: 767px) {
+  .large-image, .xl-image, .xxl-image {
+    width: 100%; }
+  .float-left.large-image,
+  .float-left.xl-image,
+  .float-left.xxl-image, .float-right.large-image,
+  .float-right.xl-image,
+  .float-right.xxl-image {
+    width: 100%;
+    clear: both; } }
+
+.no-respond {
+  width: auto !important; }
+
+/* //cover all bases
+	.float-left.img-sm,.img-md,.img-lg,.img-xl,.img-xxl{
+		@extend .img-pull-left;
+	}
+	.float-right.img-sm,.img-md,.img-lg,.img-xl,.img-xxl{
+		@extend .img-pull-right;
+	} */
+/* //cover all bases
+	.float-left.no-respond{
+		@extend .img-pull-left;
+	}
+	.float-right.no-respond{
+		@extend .img-pull-right;
+	} */
+.layout-horizontal--nav-1col .site-content__main {
+  max-width: 1120px; }
+
+.silva-edit-cross {
+  display: block;
+  width: 10px; }
+
+/* .breadcrumb--nav is specific to silva cms
+-------------------------------------------------------------- */
+.breadcrumb--nav .breadcrumb__list {
+  line-height: 1.5em; }
+
+/* line heights on headers are too big - roll up to indigo after testing */
+h1 {
+  line-height: 1.15em; }
+
+h2 {
+  line-height: 1.2em; }
+
+h3 {
+  line-height: 1.25em; }
+
+h4 {
+  line-height: 1.3em; }
+
+.news h2.newsitemheading {
+  margin-top: -.2em; }
+
+#ie-button-entry {
+  display: none; }
+
+#prosp-results-entry {
+  margin-top: 1em;
+  margin-bottom: 0; }
+  #prosp-results-entry:empty {
+    display: none; }
+  #prosp-results-entry p:last-child {
+    margin-bottom: 0; }
+
+#ie-button-international {
+  display: none; }
+
+#prosp-results-international {
+  margin-top: 1em;
+  margin-bottom: 0; }
+  #prosp-results-international:empty {
+    display: none; }
+  #prosp-results-international p:last-child {
+    margin-bottom: 0; }
+
+#ie-button-equivalence {
+  display: none; }
+
+#prosp-results-equivalence {
+  margin-top: 1em;
+  margin-bottom: 0; }
+  #prosp-results-equivalence:empty {
+    display: none; }
+  #prosp-results-equivalence p:last-child {
+    margin-bottom: 0; }
+
+.prospectus--programme {
+  border-bottom: 2px solid #dbeaea;
+  margin-bottom: 40px;
+  padding-bottom: 30px; }
+
+.prospectus--programme-head {
+  color: #007a87; }
+
+#key-information .island--highlight {
+  background: #dbeaea none repeat scroll 0 0;
+  border: 1px solid rgba(0, 122, 135, 0.1); }
+
+#key-information .island {
+  clear: both;
+  overflow: hidden;
+  padding: 2.2rem;
+  position: relative; }
+
+h5.alt-qualifications__hidden, p.alt-qualifications__hidden {
+  display: none; }
+
+p.alt-qualifications__hidden {
+  margin-bottom: 0; }
+
+h3.copy__heading {
+  border-bottom: 1px solid rgba(0, 122, 135, 0.25);
+  color: #007a87;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.5rem; }
+
+/* Graduate prospectus */
+.country-select__content {
+  background-color: #FFF;
+  position: relative;
+  padding: 3.5em 1.5em 1.5em 1.5em; }
+
+.tag--taught {
+  background: #0097a9;
+  color: #FFF;
+  font-size: 1.6rem; }
+
+.btn.cta.prospectus {
+  max-width: 200px;
+  margin-bottom: 20px; }
+
+h4.space--before {
+  margin-top: 1.5em; }
+
+/* reviews */
+.prospectus--programme .copy__section--why__ucl .box--alt {
+  padding: 3.5em 1.5em 1em 1.5em;
+  position: relative;
+  background-color: #F0F0F0;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-bottom: 2em;
+  overflow: hidden; }
+
+.media__body blockquote,
+.media__body blockquote h4 cite {
+  font-style: normal; }
+
+.media__body blockquote h4 cite {
+  text-transform: none !important;
+  margin-top: 15px;
+  font-family: arial,sans-serif; }
+
+.media__body blockquote h4,
+.media__body blockquote small {
+  font-family: arial,sans-serif;
+  font-size: 85%;
+  max-width: 50%;
+  margin-bottom: 0; }
+
+.media__body blockquote small {
+  line-height: 1.5em;
+  font-weight: 400; }
+
+.media__body blockquote small span {
+  font-weight: 700; }
+
+/*-------youtube---------*/
+.owl-carousel__item.blurb--video figcaption.overlay--youtube {
+  top: 28px; }
+
+.owl-carousel__item.blurb--video figcaption.overlay--vimeo {
+  left: 5px;
+  top: 70px; }
+
+@media only screen and (max-width: 767px) {
+  .owl-carousel__item.blurb--video figcaption.overlay--youtube {
+    top: 0;
+    padding: 1em 0 0 0;
+    background: #555; }
+    .owl-carousel__item.blurb--video figcaption.overlay--youtube div {
+      background: transparent; }
+  .owl-carousel__item.blurb--video figcaption.overlay--vimeo {
+    top: 0;
+    left: 0;
+    padding: 1em 0 0 0;
+    background-color: #555; }
+    .owl-carousel__item.blurb--video figcaption.overlay--vimeo div {
+      background: transparent; }
+  .owl-carousel__item.blurb--video .video-wrap.video--captioned {
+    margin-bottom: 0; } }
+
+@media only screen and (min-width: 990px) {
+  .hero__body--quarter {
+    width: 25%; }
+  .hero__body--half {
+    width: 50%; }
+  .hero__body--threequarters {
+    width: 75%; } }
+
+@media only screen and (max-width: 989px) {
+  .hero__blurb {
+    display: block; } }
+
+/* Utilities
+-------------------------------------------------------------- */
+/* Overrides
+* FYI - Unfortunatly you cannot override Sass variables to be inherited by existing code. For example where a colour variable changes,
+* an override partial is needed redeclaring the new colour.
+*
+-------------------------------------------------------------- */
+input, textarea {
+  padding: .5em 2%;
+  vertical-align: middle; }
+
+/* search site form
+---------------------------------------------------------------*/
+#searchSiteform input[type="text"], #searchSiteform input[type=search] {
+  padding: 1rem 0 1rem 0;
+  background-color: #dee8ea;
+  float: left;
+  border: none;
+  width: 85%;
+  padding-left: 40px;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.fa-search:before {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #54a6bb;
+  font-size: 2.5rem; }
+
+#searchSiteform {
+  max-width: 830px;
+  width: 100%;
+  border: 1px solid #54a6bb;
+  overflow: hidden;
+  border-radius: 0.5em;
+  display: block;
+  background-color: #dee8ea;
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1.5em; }
+  #searchSiteform input {
+    font-size: 2.1rem; }
+    #searchSiteform input[type=search] {
+      font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
+    #searchSiteform input[type=submit] {
+      font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+      line-height: 1.2;
+      text-align: center;
+      background-color: #54a6bb;
+      border: none;
+      border-radius: 0;
+      width: 10%;
+      float: right;
+      display: block;
+      margin: 0;
+      padding: 1rem 1.6rem;
+      color: white; }
+  @media only screen and (max-width: 767px) {
+    #searchSiteform {
+      border: none;
+      border-radius: 0;
+      background-color: transparent; }
+      #searchSiteform input[type="text"], #searchSiteform input[type="search"] {
+        width: 100%;
+        margin-bottom: 0.5rem; }
+      #searchSiteform input[type="submit"] {
+        float: none;
+        border-radius: 0.5rem;
+        width: auto; } }
+
+#siteSearchErrorField {
+  display: none;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 2em;
+  margin-top: -2em; }
+
+.site-content__sidebar #searchSiteform input[type=search] {
+  width: 65%; }
+
+.site-content__sidebar #searchSiteform input[type=submit] {
+  width: 20%; }
+
+@media only screen and (min-width: 768px) {
+  .photograph {
+    background-color: #00a5b8; } }
+
+.photograph--mobile, .header--mobile {
+  background-color: #00a5b8;
+  border-bottom: 0.5em solid #00a5b8; }
+
+.tabbed > div,
+.tabs li.active,
+.box {
+  border-color: #00a5b8; }
+
+/* Search page
+-----------------------------------------------------*/
+.layout-horizontal--nav-1col.section-search aside.facets {
+  border: 2px solid #00a5b8 !important;
+  padding: 1%;
+  background-color: #eeeeea !important;
+  border-radius: 10px; }
+  .layout-horizontal--nav-1col.section-search aside.facets .mobileCloseAside {
+    margin-left: 95%; }
+
+.blurb--video {
+  clear: both;
+  margin-bottom: 1em; }
+  .blurb--video.video--large {
+    max-width: 900px; }
+  .blurb--video.video--small {
+    max-width: 450px; }
+  .blurb--video.pull-left, .blurb--video.pull-right {
+    float: none;
+    width: auto; }
+  @media only screen and (min-width: 768px) {
+    .blurb--video.pull-left {
+      margin-bottom: 1em;
+      margin-top: 0;
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 48.429292929%;
+      clear: none;
+      float: left;
+      margin-left: 0;
+      margin-right: 3.03030303%; }
+    .blurb--video.pull-right {
+      margin-bottom: 1em;
+      margin-top: 0;
+      display: block;
+      float: left;
+      margin-left: 51.459595959%;
+      margin-right: -100%;
+      width: 48.429292929%;
+      clear: none;
+      float: right;
+      margin-right: 0;
+      margin-left: 3.03030303%; }
+      .blurb--video.pull-right .tag {
+        right: 0;
+        left: auto; } }
+  .blurb--video.video--captioned {
+    margin-bottom: 1em; }
+
+.owl-carousel__item.blurb--video figcaption {
+  /*hide overflowing elements as interferes with video controls*/
+  overflow: hidden;
+  top: 12px;
+  background: transparent; }
+  .owl-carousel__item.blurb--video figcaption div {
+    background: #191919;
+    opacity: 1;
+    padding: 0 0.5em; }
+
+.owl-carousel__item.video--large figcaption {
+  max-height: 300px; }
+
+.owl-carousel__item.video--small figcaption {
+  max-height: 150px; }
+
+table {
+  border: none; }
+
+th,
+.rt th {
+  background-color: #00a5b8;
+  border-right-color: white;
+  color: white;
+  border-bottom: none; }
+
+.rt td {
+  border-left: none;
+  border-right: none;
+  border-top: none; }
+
+.accordion__title {
+  background-color: #00a5b8;
+  border-color: white;
+  margin-bottom: 3px; }
+
+.accordion__title a {
+  color: white; }
+
+.accordion__title:last-of-type {
+  border-color: white; }
+
+.accordion__description {
+  margin-bottom: 5px; }
+
+.accordion__description:last-of-type {
+  border-bottom-color: #00a5b8; }
+
+.flag,
+.more {
+  background-color: #00a5b8; }
+
+.flag:hover,
+.more:hover {
+  background-color: #00c5dc; }
+
+.box,
+ol.code li {
+  background-color: #eefbfd; }
+
+.box.box--bar-thick {
+  border: none;
+  padding-top: 0; }
+  .box.box--bar-thick i.fa {
+    right: 1px; }
+
+.box i.fa {
+  padding: 10px;
+  background-color: #00a5b8;
+  font-size: 1.6em;
+  top: 0px;
+  position: absolute;
+  right: 0; }
+  .box i.fa.None {
+    display: none; }
+
+.site-content__main .box.box--bar-thick h1:first-of-type, .site-content__sidebar .box.box--bar-thick h2:first-of-type {
+  background-color: #00a5b8;
+  margin-top: 0;
+  color: white;
+  margin-left: -6.25%;
+  margin-right: -6.25%;
+  padding: 0.25em 6.25%; }
+  @media only screen and (min-width: 768px) {
+    .site-content__main .box.box--bar-thick h1:first-of-type, .site-content__sidebar .box.box--bar-thick h2:first-of-type {
+      margin-left: -2.60416667%;
+      margin-right: -2.60416667%;
+      padding: 0.25em 2.60416667%; } }
+  @media only screen and (min-width: 990px) {
+    .site-content__main .box.box--bar-thick h1:first-of-type, .site-content__sidebar .box.box--bar-thick h2:first-of-type {
+      margin-left: -3.03030303%;
+      margin-right: -3.03030303%;
+      padding: 0.25em 3.03030303%; } }
+
+/* 
+* Override name: Nav
+* Use: Styling lists used for navigation areas
+-------------------------------------------------------------- */
+.nav--top.nav--sticky-active {
+  z-index: 1; }
+  .nav--top.nav--sticky-active a {
+    color: #fff; }
+  .nav--top.nav--sticky-active ul {
+    background-color: #00a5b8; }
+    .nav--top.nav--sticky-active ul li {
+      border-right: 1px solid #fff; }
+
+/*.btn{
+    @if variable-exists(buttonTextColour){
+        color: $buttonTextColour;
+    }@else{
+        color: $white;
+    }
+    &.cta{
+        @if variable-exists(buttonTextBackground){
+            background-color: $buttonTextBackground;
+        }@else if variable-exists(palleteCol){
+            background-color: mix($palleteCol,$white,95%);
+        }
+        &:hover{
+            @if variable-exists(buttonTextBackgroundHover){
+                background-color: $buttonTextBackgroundHover; 
+            }@else if variable-exists(palleteCol){
+                background-color: $palleteCol;
+            }
+            @if variable-exists(buttonTextColour){
+                color: $buttonTextColour;
+            }@else{
+                color: $white;
+            }
+        }
+    }
+}
+*/
+blockquote.pull-quote__wrap, aside.pull-quote__wrap {
+  background-color: #00a5b8;
+  color: white;
+  padding: 15px 5%;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  font-style: normal; }
+  blockquote.pull-quote__wrap:before, aside.pull-quote__wrap:before {
+    color: white; }
+  blockquote.pull-quote__wrap .pull-quote__end, blockquote.pull-quote__wrap .pull-quote__start, aside.pull-quote__wrap .pull-quote__end, aside.pull-quote__wrap .pull-quote__start {
+    color: white; }
+
+.blockquote .bqstart a,
+.blockquote .meta a,
+.blockquote p.quote a {
+  color: white; }
+
+.blockquote .meta {
+  border-top-color: rgba(255, 255, 255, 0.5); }
+
+.callout {
+  background-color: #00a5b8;
+  color: white;
+  padding: 15px 5%;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  font-family: georgia, serif;
+  font-style: normal;
+  font-size: 1.1em; }
+
+.threecolumns {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.5em; }
+  .threecolumns > section {
+    border-top: 5px solid #00a5b8;
+    padding-top: 12px; }
+  @media only screen and (min-width: 990px) {
+    .threecolumns > section.threecolumns__column1 {
+      display: block;
+      float: left;
+      margin-left: 0%;
+      margin-right: -100%;
+      width: 31.3275440769%; }
+    .threecolumns > section.threecolumns__column2 {
+      display: block;
+      float: left;
+      margin-left: 34.3598890919%;
+      margin-right: -100%;
+      width: 31.3093535238%; }
+    .threecolumns > section.threecolumns__column3 {
+      display: block;
+      float: left;
+      margin-left: 68.7015876306%;
+      margin-right: -100%;
+      width: 31.2984123694%; } }
+  .threecolumns li {
+    width: 100%; }
+
+.fb-search__form .fb-search__input {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 63.9296187683%; }
+
+.fb-search__form .fb-search__submit {
+  display: block;
+  float: left;
+  margin-left: 66.963292547%;
+  margin-right: -100%;
+  width: 33.036707453%; }
+
+.fb-search__listings {
+  list-style-type: none;
+  margin-left: 0; }
+
+.fb-search__pagination {
+  margin-left: 0;
+  overflow: hidden;
+  list-style-type: none; }
+  .fb-search__pagination li {
+    float: left;
+    width: auto;
+    padding-top: 5px;
+    padding-top: 0.5rem;
+    padding-right: 15px;
+    padding-right: 1.5rem;
+    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
+    padding-left: 15px;
+    padding-left: 1.5rem;
+    border: 1px solid #bfbfbf;
+    border-radius: 2.5px;
+    border-radius: 0.25rem;
+    margin-right: 10px;
+    margin-right: 1rem; }
+    .fb-search__pagination li.fb-search__pagination--list-el--current {
+      color: white;
+      background: #00a5b8; }
+      .fb-search__pagination li.fb-search__pagination--list-el--current a {
+        color: white; }
+
+/* Utilities
+-------------------------------------------------------------- */
+/* Pallette
+-------------------------------------------------------------- */
+/* Mixins
+-------------------------------------------------------------- */
+/* Utilities
+-------------------------------------------------------------- */
+/* Parent Stylesheet
+-------------------------------------------------------------- */
+/* Pallette
+-------------------------------------------------------------- */

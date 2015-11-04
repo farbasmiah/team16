@@ -1,0 +1,196 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Team 16 - To do list</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href="{% static "css/font-awesome.min.css" %}"rel="stylesheet">
+        <link rel="stylesheet" media="screen, projection" href="{% static "css/screen.min.css" %}">
+        <link rel="stylesheet" media="screen, projection" href="{% static "css/brightblue.css" %}">
+
+        <link rel="stylesheet" media="screen, projection" href="{% static "css/impact.min.css" %}">
+
+        <link rel="stylesheet" media="screen, projection" href="{% static "css/uclSearch.min.css" %}">
+
+	<link media="print" rel="stylesheet" href="{% static "css/print.css" %}">
+
+        <link rel="shortcut icon" href="http://cdn.ucl.ac.uk/indigo/images/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="http://cdn.ucl.ac.uk/indigo/images/favicon-152.png">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="//cdn.ucl.ac.uk/indigo//images/favicon-144.png">
+
+    </head>
+    <body id="impact" class="layout-horizontal layout-horizontal--nav-2col section-impact">
+     
+     <!--noindex-->
+        	<header class="header header--desktop">
+        		<div id="top" class="masthead">
+
+			<div class="wrapper clearfix">
+
+				<div class="masthead__search">
+					<form action="http://search2.ucl.ac.uk/s/search.html" method="get">
+						<div class="search-form">
+							<span class="twitter-typeahead" style="position: relative; display: inline-block; width: 100%; direction: ltr;"><input type="search" 
+							placeholder="Search UCL websites, degrees, short courses, people and more" class="search-form__input search-form__input--search tt-input" 
+							name="query" value="" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" 
+							style="position: absolute; visibility: hidden; white-space: pre; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, &#39;Lucida Grande&#39;, 
+							sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; 
+							text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: fixed; width: 90%; left: 5%; top: 48px; right: 
+							auto; z-index: 5050; border: 1px solid rgb(170, 170, 170); border-radius: 4px; box-shadow: rgba(51, 51, 51, 0.298039) 2px 2px 2px; display: none; 
+							background-color: rgb(255, 255, 255);"><div class="AC-result AC-result--websites"></div><div class="AC-result AC-result--degrees"></div><div 
+							class="AC-result AC-result--directory"></div><div class="AC-result AC-result--research"></div></span></span>
+						</div>
+						<input type="hidden" name="collection" value="website-meta">
+		                <input type="hidden" name="profile" value="_website">
+						<input type="hidden" name="tab" value="websites">
+		                <input type="submit" name="submit" value="Go" class="btn search-form__input search-form__input--submit">
+					</form>
+				</div>
+
+		<nav class="masthead__nav m-clear">
+                    <ul class="masthead__list">
+                        <li class="masthead__item"><a href="http://www.ucl.ac.uk/" class="masthead__link">UCL Home</a>
+                        </li>
+                        <li class="masthead__item"><a href="http://www.ucl.ac.uk/prospective-students/" class="masthead__link">Prospective students</a>
+                        </li>
+                        <li class="masthead__item"><a href="http://www.ucl.ac.uk/current-students/" class="masthead__link">Current students</a>
+                        </li>
+                        <li class="masthead__item"><a href="http://www.ucl.ac.uk/staff/" class="masthead__link">Staff</a>
+                        </li>
+                    </ul>
+                </nav>
+			</div>
+
+		</div><!-- end #global-masthead -->
+
+    	<div class="wrapper">
+               		
+		<div class="photograph">
+		
+			<div class="brand">
+				<p class="brand__heading">Team 16</p>
+				<a class="brand__link" href="http://www.ucl.ac.uk/"><span class="visually-hidden">Home</span></a>
+					<img src="{% static "css/ucl-logo.svg" %}" alt="UCL logo" id="logo" class="brand__logo">
+			</div>
+			
+		</div><!-- end .photograph -->
+
+	</div> <!-- end .wrapper -->
+
+    </header><!-- end #nav-wrap -->
+
+    <!--endnoindex-->
+
+        <div class="wrapper site-content">
+            <!--noindex-->
+            <header class="header header--mobile default-header">
+	<a class="header header__open" href="#">
+				<img src="{% static "css/mob-nav.png" %}" alt="Menu">
+			</a>
+</header>
+
+
+            <!--endnoindex-->
+            <div class="site-content__inner clearfix">
+                <div class="site-content__body">
+                    <!--noindex-->
+	
+                    <!--endnoindex-->
+                    <div class="site-content__main">
+						{% block content %}
+						{% endblock %}
+                        <article class="article clearfix">
+                            <!-- Start Silva content --> 
+ 
+      <!-- right content block --> 
+  </section> 
+</section>
+
+<!-- End Silva content --> 
+
+                        </article>
+
+                    <div class="content-footer">
+                                        <hr>
+                <div id="content-footer"></div>
+
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--noindex-->
+
+<footer class="footer wrapper"> 
+    <div class="footer__inner clearfix">
+
+    <article class="block block--col-1">
+            <h2 class="as-h5">Facilities</h2>
+            <ul class="footer__list list-unstyled">
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+                <li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+            </ul>
+    </article>
+
+    <article class="block block--col-2">
+            <h2 class="as-h5">Locations</h2>
+            <ul class="footer__list list-unstyled">
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/australia#">UCL Australia</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+            </ul>
+    </article>
+
+    <article class="block block--col-3">
+            <h2 class="as-h5">Connect with us</h2>
+            <ul class="footer__list list-unstyled">
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+                <li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Support us</a></li>
+            </ul>
+    </article>
+
+    <hr class="clear">
+
+    <ul class="footer__list list-unstyled zero-bottom">
+            <li class="footer__item">
+        University College London, Gower Street, London, WC1E 6BT
+        +44 (0)20 7679 2000
+           </li>
+        </ul>
+
+           <ul class="footer__links list-inline footer__list list-unstyled list-inline--divided">
+            <li class="footer__item">
+            Copyright © 2015 UCL 
+            </li>
+            <li class="footer__item">
+            <a href="http://www.ucl.ac.uk/disclaimer">Disclaimer</a>
+            </li>
+            <li class="footer__item">
+                <a href="http://www.ucl.ac.uk/foi">Freedom of Information</a>
+            </li>
+            <li class="footer__item">
+                <a href="http://www.ucl.ac.uk/accessibility">Accessibility</a>
+            </li>
+            <li class="footer__item">
+                <a href="http://www.ucl.ac.uk/privacy">Privacy</a>
+            </li>
+            <li class="footer__item">
+                <a href="http://www.ucl.ac.uk/cookies">Cookies</a>
+           </li>
+            <li class="footer__item">
+                <a href="http://www.ucl.ac.uk/contact-list">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    </footer>         
+        <!--endnoindex-->
+</body>
+</html>

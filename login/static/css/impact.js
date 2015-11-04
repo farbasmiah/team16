@@ -1,0 +1,1 @@
+define(["jquery"],function(a){a(document).ready(function(){document.URL.search(/search2\.ucl\.ac\.uk/i)<0&&a(".result__item--best-bet").show(),a("body#impact #right-column").prepend('<h2 class="heading">Contact</h2>')})});
