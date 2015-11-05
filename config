@@ -1,0 +1,14 @@
+Alias /static /home/localuser/newsite/static
+<Directory /home/localuser/newsite/static>
+    Require all granted
+</Directory>
+
+<Directory /home/localuser/newsite/newsite>
+    <Files wsgi.py>
+        Require all granted
+    </Files>
+</Directory>
+
+WSGIDaemonProcess newsite python-path=/home/localuser/newsite:/home/localuser/newsite/env/lib/python2.7/site-packages
+WSGIProcessGroup newsite
+WSGIScriptAlias / /home/localuser/newsite/newsite/wsgi.py
