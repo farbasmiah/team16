@@ -28,3 +28,15 @@ class ToDoForm(forms.Form):
 	#name = forms.CharField(max_length=100,label='Name')
 	description = forms.CharField(max_length=1000,label='Description')
 	#created = forms.DateTimeField(label='Created')
+	
+class DeleteForm(forms.Form):
+	id = forms.IntegerField(label='Task ID')
+	
+class EditForm(forms.Form):
+	id = forms.IntegerField(label='Task ID')
+	description = forms.CharField(max_length=1000,label='Description')
+	def clean(self):
+		if 'description' in self.cleaned_data == None:
+			raise forms.ValidationError(_("Null is not allowed."))
+		else:
+			return self.cleaned_data

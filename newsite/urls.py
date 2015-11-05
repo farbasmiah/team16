@@ -10,6 +10,10 @@ urlpatterns = [
 	url(r'^register/success/$', register_success),
 	url(r'^home/$', home),
 	url('r^$', 'newsite.login.views.index'),
-	url(r'^add/$', add),
-	url('r^$todo', 'newsite.login.views.add'),
+	url(r'^todo/add/$', add),
+	url('r^$', 'newsite.login.views.add'),
+	url(r'^delete/delete/$', delete),
+	url(r'^$', 'newsite.login.views.delete'),
+	url(r'^$', 'newsite.login.views.edit'),
+	url(r'edit/$', edit),
 ]

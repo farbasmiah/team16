@@ -5,11 +5,12 @@
     <p>Welcome {{ user.username }} !!!</p>
     <a href="/logout/">Logout</a>
 	<h2>todo</h2>
-	<a href="/add/">Add action</a>
+	<a href="/todo/add/">Add action</a>
+	<a href="/delete/delete/">Delete</a>
+	<a href="/edit/edit/">Edit</a>
  
 	{% for x in todo %}
- 
-		<p>{{ x.description }}</p>
+		<p>{{ x.id  }}. {{x.description }}</p>
 	<hr />
 {% endfor %}
 {% endblock %}

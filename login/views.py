@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django import forms
 from . import models
+from django.shortcuts import get_object_or_404
 @csrf_protect
 def register(request):
     if request.method == 'POST':
@@ -72,4 +73,44 @@ def add(request):
 	return render_to_response(
 	'todo/todo.html',
 	variables,
-	)	
+	)
+	
+def delete(request):
+	if request.method == 'POST':
+		form = DeleteForm(request.POST)
+		if form.is_valid():
+			action = get_object_or_404(models.todo.objects,pk = form.cleaned_data['id'])
+			if request.user.username == action.createdby:
+				action.delete()
+			return HttpResponseRedirect('/home/')
+	else:
+		form = DeleteForm()
+	variables = RequestContext(request, {
+	'form': form
+	})
+	
+	return render_to_response(
+	'delete/delete.html',
+	variables,
+	)
+	
+def edit(request):
+	if request.method == 'POST':
+		form = DeleteForm(request.POST)
+		if form.is_valid():
+			action = get_object_or_404(models.todo.objects,pk = form.cleaned_data['id'])
+			if request.user.username == action.createdby:
+				action.description = form.cleaned_data['description']
+				#action.description = '123'
+				action.save()
+			return HttpResponseRedirect('/home/')
+	else:
+		form = EditForm()
+	variables = RequestContext(request, {
+	'form': form
+	})
+	
+	return render_to_response(
+	'edit/edit.html',
+	variables,
+	)
