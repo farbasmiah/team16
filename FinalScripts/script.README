@@ -1,0 +1,12 @@
+Before you can run any script you will need to do chmod +x <script name>
+
+
+Once that has been done type the following into terminal (on deployed server)
+crontab -e
+Paste the below line and press Ctrl X, yes to save buffers then enter
+*/15 * * * * /home/localuser/team16/backup.sh
+Also create a folder called Recovery (mkdir Recovery)
+
+Then on the create a folder called Backup on the backup server then do the same but instead write this:
+20 00 * * * /home/localuser/Backup/Sortbackup.sh
+
