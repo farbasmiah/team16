@@ -1,0 +1,13 @@
+- python-pip
+- lftp
+- epel-release
+- httpd
+- mod_wsgi
+- virtualenv
+- Django >= 1.8
+
+Directly deploy:
+- sudo sh bash.sh
+
+Remote deploy:
+- ssh localuser@stud<user name>.cs.ucl.ac.uk 'su bash -s' < bash.sh
