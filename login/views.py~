@@ -100,7 +100,7 @@ def edit(request):
 		if form.is_valid():
 			item = get_object_or_404(models.todo,pk=form.cleaned_data['id'])
 			if request.user.username == item.createdby:
-				item.description = request.POST['description']
+				item.description = form.cleaned_data['description']
 				item.save()
 			return HttpResponseRedirect('/home/')
 	else:

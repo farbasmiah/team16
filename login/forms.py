@@ -35,8 +35,3 @@ class DeleteForm(forms.Form):
 class EditForm(forms.Form):
 	id = forms.IntegerField(label='Task ID')
 	description = forms.CharField(max_length=1000,label='Description')
-	def clean(self):
-		if 'description' in self.cleaned_data == None:
-			raise forms.ValidationError(_("Null is not allowed."))
-		else:
-			return self.cleaned_data
