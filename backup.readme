@@ -1,0 +1,4 @@
+chmod +x back.sh into terminal
+into terminal type export EDITOR=nano then type crontab -e
+Paste the below line and press Ctrl X, yes to save buffers then enter
+*/15 * * * * /home/localuser/team16/backup.sh
