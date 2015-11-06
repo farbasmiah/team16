@@ -8,6 +8,3 @@
 
 Directly deploy:
 - sudo sh bash.sh
-
-Remote deploy:
-- ssh localuser@stud<user name>.cs.ucl.ac.uk 'su bash -s' < bash.sh
